@@ -42,10 +42,6 @@ jobs:
       - name: Install Composer dependencies
         run: |
           composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
-      - name: Install NPM dependencies
-        run: |
-          npm install
-          npm run dev
       - name: Prepare database
         run: |
           php bin/console doctrine:database:create
