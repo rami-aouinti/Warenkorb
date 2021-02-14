@@ -2,12 +2,10 @@
 
 namespace App\Traits;
 
-use Exception;
 use Doctrine\ORM\Mapping as ORM;
 
 trait ResourceId
 {
-
    /**
      * @var int|null
      * @ORM\Id
@@ -16,7 +14,6 @@ trait ResourceId
      */
     private ?int $id = null;
 
-    
     public function getId(): ?int
     {
         return $this->id;

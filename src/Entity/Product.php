@@ -78,12 +78,7 @@ class Product
      * @param User $producer
      * @return static
      */
-    public static function create(
-        string $name,
-        string $description,
-        int $quantity,
-        float $price,
-        User $producer): self
+    public static function create(string $name, string $description, int $quantity, float $price, User $producer): self
     {
         $product = new self();
         $product->name = $name;

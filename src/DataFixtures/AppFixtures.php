@@ -49,11 +49,18 @@ class AppFixtures extends Fixture
         
         foreach ($users as $user) {
             for ($j = 1; $j <= 5; $j++) {
-                $product = Product::create($faker->text(10), $faker->text(50), random_int(5,50),random_int(100,250), $user);
+                $product = Product::create(
+                    $faker->text(10),
+                    $faker->text(50),
+                    random_int(5, 50),
+                    random_int(100, 250),
+                    $user
+                );
                 shuffle($users);
                 $manager->persist($product);
             }
         }
+
         $manager->flush();
     }
 }

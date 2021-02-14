@@ -7,7 +7,6 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 
-
 /**
  * @method CartItem|null find($id, $lockMode = null, $lockVersion = null)
  * @method CartItem|null findOneBy(array $criteria, array $orderBy = null)
@@ -18,14 +17,12 @@ class CartItemRepository extends ServiceEntityRepository
 {
     private $manager;
 
-    public function __construct(
-        ManagerRegistry $registry,
-        EntityManagerInterface $manager)
+    public function __construct(ManagerRegistry $registry, EntityManagerInterface $manager)
     {
         parent::__construct($registry, CartItem::class);
         $this->manager = $manager;
     }
-
+    
     public function saveProduct($product, $quantity, $customer)
     {
         $newCart = new CartItem();
