@@ -13,6 +13,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.8",
         "fzaninotto/faker": "^1.9",
+        "lexik/jwt-authentication-bundle": "^2.11",
         "phpdocumentor/reflection-docblock": "^5.2",
         "psr/log": "^1.1",
         "ramsey/uuid-doctrine": "^1.6",
