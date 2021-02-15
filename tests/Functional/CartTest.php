@@ -5,6 +5,9 @@ namespace App\Tests\Functional;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class CartTest
+ */
 class CartTest extends AbstractEndPoint
 {
     /*

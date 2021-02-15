@@ -7,6 +7,9 @@ use App\Entity\Product;
 use App\Entity\User;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class CartTest
+ */
 class CartTest extends TestCase
 {
     private CartItem $cart;
