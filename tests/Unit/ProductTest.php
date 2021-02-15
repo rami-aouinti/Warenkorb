@@ -6,6 +6,9 @@ use App\Entity\Product;
 use App\Entity\User;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class ProductTest
+ */
 class ProductTest extends TestCase
 {
     private Product $product;

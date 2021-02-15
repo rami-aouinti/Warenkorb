@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\CartItemRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Traits\ResourceId;
 
@@ -24,7 +23,6 @@ class CartItem
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank
-     * @Assert\Length(min=1)
      */
     private $quantity;
 

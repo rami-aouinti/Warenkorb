@@ -2,8 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\CartItem;
-use App\Entity\Product;
 use App\Entity\User;
 use App\Repository\CartItemRepository;
 use App\Repository\ProductRepository;
@@ -11,8 +9,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response;
 use App\Services\CartOperations;
@@ -32,24 +28,17 @@ class CartController
 
     private CartOperations $cartOperations;
 
-    private SerializerInterface $serializer;
-
-    private ValidatorInterface $validator;
 
     public function __construct(
         EntityManagerInterface $entityManager,
         CartItemRepository $cartRepository,
         ProductRepository $productRepository,
-        CartOperations $cartOperations,
-        SerializerInterface $serializer,
-        ValidatorInterface $validator
+        CartOperations $cartOperations
     ) {
         $this->cartRepository = $cartRepository;
         $this->productRepository = $productRepository;
         $this->entityManager = $entityManager;
         $this->cartOperations = $cartOperations;
-        $this->serializer = $serializer;
-        $this->validator = $validator;
     }
 
     /**

@@ -2,6 +2,9 @@
 
 namespace App\Services;
 
+/**
+ * Class CartOperations
+ */
 class CartOperations
 {
     public function getResource(array $products)
